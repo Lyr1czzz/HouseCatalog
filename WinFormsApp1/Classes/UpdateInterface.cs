@@ -42,7 +42,7 @@ namespace HouseCatalog.Classes
                 mainForm.pnlItemsList.Controls.Add(uC_Item);
                 uC_Item.Dock = DockStyle.Top;
 
-                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage();
+                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage(mainForm);
                 uC_ItemsPage.HouseId = item.Id;
                 uC_ItemsPage.ItemName = item.Name;
                 uC_Item.Name = "pg" + item.Name;
@@ -120,7 +120,7 @@ namespace HouseCatalog.Classes
                 mainForm.pnlItemsList.Controls.Add(uC_Item);
                 uC_Item.Dock = DockStyle.Top;
 
-                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage();
+                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage(mainForm);
                 uC_ItemsPage.HouseId = item.Id;
                 uC_ItemsPage.ItemName = item.Name;
                 uC_Item.Name = "pg" + item.Name;
@@ -173,7 +173,7 @@ namespace HouseCatalog.Classes
                 mainForm.pnlItemsList.Controls.Add(uC_Item);
                 uC_Item.Dock = DockStyle.Top;
 
-                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage();
+                UC_ItemsPage uC_ItemsPage = new UC_ItemsPage(mainForm);
                 uC_ItemsPage.HouseId = item.Id;
                 uC_ItemsPage.ItemName = item.Name;
                 uC_Item.Name = "pg" + item.Name;
@@ -202,5 +202,34 @@ namespace HouseCatalog.Classes
 
         }
 
+        internal static void UpdateOrderList(MainForm mainForm)
+        {
+            HouseCatalogContext houseCatalogContext = new HouseCatalogContext();
+            var items = houseCatalogContext.Houses.ToList();
+            mainForm.pnlItemsList.Controls.Clear();
+
+            foreach (var item in items)
+            {
+                var deletePages = mainForm.Controls.Find("pg" + item.Name, true);
+                foreach (var page in deletePages)
+                {
+                    if (page != null) mainForm.Controls.Remove(page);
+                }
+            }
+
+            var orders = houseCatalogContext.Orders.ToList();
+            foreach (var order in orders)
+            {
+                UC_OrderItem uC_OrderItem = new();
+                uC_OrderItem.Id = order.Id;
+                uC_OrderItem.HouseId = order.HouseId;
+                uC_OrderItem.TelephoneNumber = order.TelephoneNumber;
+                uC_OrderItem.Email = order.Email;
+                uC_OrderItem.SetText();
+
+                mainForm.pnlItemsList.Controls.Add(uC_OrderItem);
+                uC_OrderItem.Dock = DockStyle.Top;
+            }
+        }
     }
 }

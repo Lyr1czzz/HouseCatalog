@@ -1,4 +1,5 @@
 ﻿using HouseCatalog.Classes;
+using HouseCatalog.UserContols;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,12 @@ namespace WinFormsApp1
             UpdateInterface.UpdateItems(this);
             comboCity.SelectedItem = "Все города";
             comboSort.SelectedItem = "От низкой к высокой";
+            if (CurrentUser.isAdmin == true)
+            {
+                btnAdd.Visible = true;
+                btnOrders.Visible = true;
+                btnItemes.Visible = true;
+            }
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -63,6 +70,29 @@ namespace WinFormsApp1
             numPrice2.Value = 100000000;
             numSquare1.Value = 0;
             numSquare2.Value = 1000;
+        }
+
+        private void codeeloButton1_Click(object sender, EventArgs e)
+        {
+            UC_AddItem uC_AddItem = new UC_AddItem(this);
+            pnlItemsList.Controls.Clear();
+            pnlItemsList.Controls.Add(uC_AddItem);
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            UpdateInterface.UpdateItemsWithoutFilters(this);
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            UpdateInterface.UpdateOrderList(this);
+        }
+
+        private void codeeloButton1_Click_1(object sender, EventArgs e)
+        {
+            UpdateInterface.UpdateItemsWithoutFilters(this);
         }
     }
 }

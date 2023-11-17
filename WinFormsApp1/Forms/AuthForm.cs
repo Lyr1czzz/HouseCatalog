@@ -25,7 +25,7 @@ namespace WinFormsApp1
                     .FirstOrDefault(u => u.Username == login);
                 if (userExists != null)
                 {
-                    MessageBox.Show("Пользователь с такой почтой уже зарегистрирован!");
+                    MessageBox.Show("Пользователь с таким логином уже зарегистрирован!");
                     return;
                 }
                 if (Pass.Text != Repass.Text)
@@ -64,8 +64,13 @@ namespace WinFormsApp1
                     .FirstOrDefault(u => u.Username == login && u.Password == password);
                 if (user == null)
                 {
-                    MessageBox.Show("Неправильная почта или пароль!");
+                    MessageBox.Show("Неправильныйд логин или пароль!");
                     return;
+                }
+                if (Login.Text == "admin")
+                {
+                    CurrentUser.isAdmin = true;
+                    MessageBox.Show("Вы входите как администратор");
                 }
 
                 MainForm mainForm = new MainForm();
@@ -90,6 +95,11 @@ namespace WinFormsApp1
             Login.Text = "";
             Pass.Text = "";
             Repass.Text = "";
+            Pass.UseSystemPasswordChar = false;
+            Pass.PasswordChar = '\0';
+            Repass.UseSystemPasswordChar = false;
+            Repass.PasswordChar = '\0';
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -109,6 +119,10 @@ namespace WinFormsApp1
             Login.Text = "";
             Pass.Text = "";
             Repass.Text = "";
+            Pass.UseSystemPasswordChar = true;
+            Pass.PasswordChar = '*';
+            Repass.UseSystemPasswordChar = true;
+            Repass.PasswordChar = '*';
         }
 
         private void backlabel_Click(object sender, EventArgs e)

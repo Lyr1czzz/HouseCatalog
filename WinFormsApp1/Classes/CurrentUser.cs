@@ -10,5 +10,6 @@ namespace HouseCatalog.Classes
     {
         public static string Username { get; set; } = string.Empty;
         public static int Id { get; set; }
+        public static bool isAdmin { get; set; } = false;
     }
 }

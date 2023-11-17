@@ -47,34 +47,37 @@
             // lblName
             // 
             lblName.AutoSize = true;
+            lblName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblName.Location = new Point(370, 15);
             lblName.Name = "lblName";
-            lblName.Size = new Size(77, 20);
+            lblName.Size = new Size(100, 28);
             lblName.TabIndex = 1;
             lblName.Text = "Название";
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(856, 15);
             label2.Name = "label2";
-            label2.Size = new Size(48, 20);
+            label2.Size = new Size(61, 25);
             label2.TabIndex = 2;
             label2.Text = "Цена:";
             // 
             // lblPrice
             // 
             lblPrice.AutoSize = true;
+            lblPrice.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblPrice.Location = new Point(912, 15);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(50, 20);
+            lblPrice.Size = new Size(63, 25);
             lblPrice.TabIndex = 3;
             lblPrice.Text = "label3";
             // 
             // lblCity
             // 
             lblCity.AutoSize = true;
-            lblCity.Location = new Point(430, 62);
+            lblCity.Location = new Point(419, 61);
             lblCity.Name = "lblCity";
             lblCity.Size = new Size(50, 20);
             lblCity.TabIndex = 5;
@@ -83,7 +86,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(370, 62);
+            label5.Location = new Point(370, 61);
             label5.Name = "label5";
             label5.Size = new Size(54, 20);
             label5.TabIndex = 4;
@@ -92,7 +95,7 @@
             // lblArea
             // 
             lblArea.AutoSize = true;
-            lblArea.Location = new Point(431, 110);
+            lblArea.Location = new Point(419, 109);
             lblArea.Name = "lblArea";
             lblArea.Size = new Size(50, 20);
             lblArea.TabIndex = 9;
@@ -101,7 +104,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(370, 110);
+            label9.Location = new Point(370, 109);
             label9.Name = "label9";
             label9.Size = new Size(55, 20);
             label9.TabIndex = 8;
@@ -110,7 +113,7 @@
             // lblStreet
             // 
             lblStreet.AutoSize = true;
-            lblStreet.Location = new Point(430, 158);
+            lblStreet.Location = new Point(419, 157);
             lblStreet.Name = "lblStreet";
             lblStreet.Size = new Size(58, 20);
             lblStreet.TabIndex = 11;
@@ -119,7 +122,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(370, 158);
+            label11.Location = new Point(370, 157);
             label11.Name = "label11";
             label11.Size = new Size(54, 20);
             label11.TabIndex = 10;
@@ -128,7 +131,7 @@
             // lblCountRooms
             // 
             lblCountRooms.AutoSize = true;
-            lblCountRooms.Location = new Point(491, 207);
+            lblCountRooms.Location = new Point(485, 207);
             lblCountRooms.Name = "lblCountRooms";
             lblCountRooms.Size = new Size(58, 20);
             lblCountRooms.TabIndex = 13;
@@ -151,20 +154,20 @@
             btnOpenPage.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnOpenPage.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnOpenPage.FillColor = Color.DarkSlateGray;
-            btnOpenPage.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOpenPage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnOpenPage.ForeColor = Color.White;
-            btnOpenPage.Location = new Point(826, 110);
+            btnOpenPage.Location = new Point(826, 109);
             btnOpenPage.Name = "btnOpenPage";
-            btnOpenPage.Size = new Size(180, 56);
+            btnOpenPage.Size = new Size(181, 56);
             btnOpenPage.TabIndex = 14;
             btnOpenPage.Text = "Перейти";
             btnOpenPage.Click += btnOpenPage_Click;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(20, 20);
+            pictureBox1.Location = new Point(21, 20);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(330, 222);
+            pictureBox1.Size = new Size(330, 221);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 15;
             pictureBox1.TabStop = false;
@@ -188,7 +191,7 @@
             Controls.Add(label2);
             Controls.Add(lblName);
             Name = "UC_Item";
-            Size = new Size(1038, 274);
+            Size = new Size(1038, 275);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

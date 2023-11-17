@@ -52,11 +52,11 @@
             siticoneButton1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             siticoneButton1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             siticoneButton1.FillColor = Color.DarkSlateGray;
-            siticoneButton1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneButton1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             siticoneButton1.ForeColor = Color.White;
-            siticoneButton1.Location = new Point(12, 12);
+            siticoneButton1.Location = new Point(11, 12);
             siticoneButton1.Name = "siticoneButton1";
-            siticoneButton1.Size = new Size(177, 51);
+            siticoneButton1.Size = new Size(162, 51);
             siticoneButton1.TabIndex = 0;
             siticoneButton1.Text = "Назад";
             siticoneButton1.Click += siticoneButton1_Click;
@@ -64,9 +64,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(202, 93);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(176, 92);
             label1.Name = "label1";
-            label1.Size = new Size(150, 20);
+            label1.Size = new Size(237, 32);
             label1.TabIndex = 1;
             label1.Text = "Оформление заказа";
             // 
@@ -80,11 +81,13 @@
             txtTelephoneNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtTelephoneNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTelephoneNumber.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelephoneNumber.ForeColor = Color.Black;
             txtTelephoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTelephoneNumber.Location = new Point(140, 173);
-            txtTelephoneNumber.Margin = new Padding(3, 4, 3, 4);
+            txtTelephoneNumber.Location = new Point(139, 173);
+            txtTelephoneNumber.Margin = new Padding(3, 5, 3, 5);
             txtTelephoneNumber.Name = "txtTelephoneNumber";
             txtTelephoneNumber.PasswordChar = '\0';
+            txtTelephoneNumber.PlaceholderForeColor = Color.Black;
             txtTelephoneNumber.PlaceholderText = "Номер телефона";
             txtTelephoneNumber.SelectedText = "";
             txtTelephoneNumber.Size = new Size(286, 60);
@@ -100,11 +103,13 @@
             txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEmail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(140, 276);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(139, 276);
+            txtEmail.Margin = new Padding(3, 5, 3, 5);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
+            txtEmail.PlaceholderForeColor = Color.Black;
             txtEmail.PlaceholderText = "Почта";
             txtEmail.SelectedText = "";
             txtEmail.Size = new Size(286, 60);
@@ -118,9 +123,9 @@
             siticoneButton2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             siticoneButton2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             siticoneButton2.FillColor = Color.DarkSlateGray;
-            siticoneButton2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            siticoneButton2.Font = new Font("Segoe UI", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
             siticoneButton2.ForeColor = Color.White;
-            siticoneButton2.Location = new Point(140, 397);
+            siticoneButton2.Location = new Point(139, 397);
             siticoneButton2.Name = "siticoneButton2";
             siticoneButton2.Size = new Size(286, 89);
             siticoneButton2.TabIndex = 4;
@@ -141,6 +146,7 @@
             Name = "OrderForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "OrderForm";
+            Load += OrderForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
